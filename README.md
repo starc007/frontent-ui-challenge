@@ -1,10 +1,8 @@
-# <p align="center">React + TailwindCSS Template</p>
+# <p align="center">Frontend UI Challenge</p>
 
-A basic production ready react js template for kickstart your project.
+![alt text](image.png)
 
 ## 🛠️ Tech Stack
 
 - [React](https://reactjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
-
-## 🛠️ Clone the repo and use it
