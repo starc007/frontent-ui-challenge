@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Inter", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply bg-dark;
+}
+
+.check {
+  display: none;
+}
+
+.check + label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.check + label::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+.check:checked + label::before {
+  /* show tick mark; */
+  /* content: "✔";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem; */
+
+  @apply bg-secondary-400 border-secondary-400;
+}
+
+.check:checked + label::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  animation: line-animation 0.5s ease forwards;
+  @apply bg-secondary-400;
+}
+
+/* animate label with cut line animation in label */
+
+.checked {
+  position: relative;
+}
+
+@keyframes line-animation {
+  from {
+    width: 0;
+    left: 0;
+    transform: translateX(0);
+  }
+  to {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+input[type="checkbox"] + label {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+input[type="checkbox"]:checked + label {
+  @apply text-secondary-400;
+}
+
+.custom-btn {
+  text-shadow: 0px -1px 0px #201f23;
+  text-decoration: none;
+  background: transparent;
+  box-shadow: inset 0px 1px 0px #26252a, 0px 1px 3px #201f23;
+  outline: none;
+}
+
+.btn {
+  text-shadow: -1px -1px 1px #201f23;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#26252a),
+    to(#201f23)
+  );
+}
+
+.right-linearGrad {
+  background: linear-gradient(
+    360deg,
+    #652bfc 17.25%,
+    rgba(100, 102, 242, 0) 100%
+  );
+}
+
+.btn-gradient {
+  background: linear-gradient(180deg, #8c6cff 0%, #764fff 100%),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.28));
+}
