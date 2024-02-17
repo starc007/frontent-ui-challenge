@@ -8,7 +8,3 @@ A basic production ready react js template for kickstart your project.
 - [Tailwind CSS](https://tailwindcss.com/)
 
 ## 🛠️ Clone the repo and use it
-
-```bash
-git clone https://github.com/starc007/frontend-react-tailwindcss-template.git
-```
